@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - .:/nodejs/src/app
+    command: sh -c "npm install && npm run start:debug"
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3001:3001
+

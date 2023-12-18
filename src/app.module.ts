@@ -1,6 +1,5 @@
 import { Logger, MiddlewareConsumer, Module } from '@nestjs/common';
 import { LoggerModule } from 'nestjs-pino';
-import { ClsModule } from 'nestjs-cls';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -11,12 +10,6 @@ import { getCorrelationId } from './server/get-correlation-id';
 
 @Module({
   imports: [
-    ClsModule.forRoot({
-      global: true,
-      middleware: {
-        mount: true,
-      },
-    }),
     LoggerModule.forRootAsync({
       useFactory: async () => {
         return {

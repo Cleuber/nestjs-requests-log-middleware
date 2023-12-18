@@ -5,9 +5,6 @@ This project is an example of requests log using middleware in NestJS.
 
 The purpose of this project is to log every requests and its respective responses. For that purpose, CorrelationId/ContextId is used to trace entire call
 
-### To run project
-# Nestjs Requests Log Middleware
-
 ## Requirements
 1 - Docker + Docker compose OR NodeJS 20.x installed
 
